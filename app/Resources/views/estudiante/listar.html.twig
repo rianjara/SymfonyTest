@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+</head>
+<body>
+{% block body %}
+
+    {{ dump() }}
+
+    <ul>
+        {% for estudiante in estudiantes %}
+            <li>
+                id = {{ estudiante.id }}
+                <br>
+                nombre = {{ estudiante.nombre }}
+            </li>
+        {% endfor %}
+    </ul>
+    </ul>
+
+{% endblock %}
+</body>
+</html>

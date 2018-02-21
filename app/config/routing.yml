@@ -1,0 +1,27 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+consumo_detalle:
+  path:     /consumo/detalle
+  defaults: { _controller: AppBundle:Default:consumoDetalle }
+
+estudiante_listar:
+  path:     /api/v1/estudiantes
+  defaults: { _controller: AppBundle:Estudiante:listar }
+  methods:  [GET]
+
+estudiante_crear:
+  path:     /api/v1/estudiantes
+  defaults: { _controller: AppBundle:Estudiante:crear }
+  methods:  [POST]
+
+estudiante_eliminar:
+  path:     /api/v1/estudiantes/{id}
+  defaults: { _controller: AppBundle:Estudiante:eliminar }
+  methods:  [DELETE]
+
+estudiante_actualizar:
+  path:     /api/v1/estudiantes
+  defaults: { _controller: AppBundle:Estudiante:actualizar }
+  methods:  [PUT]
